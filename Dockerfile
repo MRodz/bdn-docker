@@ -15,4 +15,8 @@ RUN apt-get clean &&\
     cpan String::Random &&\
     cpan Unicode::UCD
 
+# installing SAXON HE9
 RUN wget https://datapacket.dl.sourceforge.net/project/saxon/Saxon-HE/9.8/SaxonHE9-8-0-11J.zip
+RUN mkdir saxon
+RUN unzip SaxonHE9-8-0-11J.zip -d /context/saxon/ &&\
+    rm SaxonHE9-8-0-11J.zip
